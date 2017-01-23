@@ -1,5 +1,4 @@
-const hbs = require('hbs');
-var hbs_config = function(app) {
+var hbs_config = function(app, hbs) {
   hbs.registerPartial('layouts/frame', '{{frame}}')
 }
 
