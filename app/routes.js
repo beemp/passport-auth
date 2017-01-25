@@ -21,6 +21,17 @@ module.exports = function(app,passport,hbs) {
     res.render('signup', {message: req.flash('signupMessage')})
   })
 
+  app.post('/signup', (req,res) => {
+    console.log(req.param.email)
+    res.redirect('/signup')
+  })
+
+/*  app.post('/signup', passport.authenticate('local-signup', {
+    successRedirect   : '/profile',
+    failureRedirect   : '/signup',
+    failureFlash      : true
+  }))*/
+
   // =====================================
   // PROFILE =============================
   // =====================================
